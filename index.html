@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reverse Engineered Website</title>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+                <div class="first-link">
+                    <a href="#">Foundation Framework</a>
+                </div>
+                <div class="links-wrap">
+                    <div class="dropdown" data-dropdown>
+                        <a href="#">Showcase</a>
+                    <div class="dropdown-menu" data-dropdown-button>
+                        Dropdown Content
+                    </div>
+                    </div>
+                    <a href="#">Develop</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Get Involved</a>
+                    <a href="#">Docs</a>
+                    <a href="#" class="last-link">Getting Started</a>
+                </div> 
+        </nav>
+    <div class="second-bar">
+        <div class="top-left">
+            <p class="p1">Foundation for Sites</p>
+            <p class="p2">6.7.5  <span>changelog</span></p>
+        </div>
+        <input type="text" class="icon" placeholder="Find a page, component, variable, mixin, function...">
+        <div class="top-right">
+            <button class="button1" type="button" >Star</button>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="middle-left">
+                <p>Getting Started</p>
+                <p>Setup</p>
+                <p>General</p>
+                <p>Utilities</p>
+                <p>Typography</p>
+                <p>Controls</p>
+                <p class="p3">Button</p>
+                <p class="p3">Button Group</p>
+                <p class="p3">Close Button</p>
+                <p class="p3">Slider</p>
+                <p class="p3">Switch</p>
+                <p>Navigation</p>
+                <p>Containers</p>
+                <p>Media</p>
+                <p>Plugins</p>
+                <p>Sass</p>
+                <p>Libraries</p>
+                <p>Older Versions</p>
+            </div>
+            <div class="middle">
+                <h1 class="button-header">Button</h1>
+                <p class="button-content">Buttons are convenient tools when you need more traditional actions. To that end, Foundation has many easy to use button styles that you can customize or override to fit your needs.</p>
+                <iframe id="button-vid" src="https://www.youtube.com/embed/iEAtuFk4-LQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <section  id="anchor-basics">
+                <h2 class="headers">Basics</h2>
+                <p class="contents">A basic button can be created with minimal markup. Because buttons can be used for many purposes, it's important to use the right tag.</p>
+                <ul class="first-points">
+                    <li>Use the <code>&lt;a&gt;</code>  tag if the button is a link to another page, or a link to an anchor within a page. Generally anchors don't require JavaScript to work.
+                    </li>
+                    <li>Use the <code>&lt;button&gt;</code>  tag if the button performs an action that changes something on the current page. <code>&lt;button&gt;</code>  elements almost always require JavaScript to function.
+                    </li>
+                </ul>
+                <p class="part-vid">
+                    <a class="" data-open-video="0:34" href="https://www.youtube.com/watch?v=iEAtuFk4-LQ&amp;t=34" target="_blank">
+                        <img src="https://get.foundation/sites/docs/assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+                </p>
+                <div class="blue box">
+                    <p>Add the attribute <code>type="button"</code>  to <code>&lt;button&gt;</code>  elements, unless the button submits a form, in which case you should add the class `.submit` and remove <code>type="button"</code>
+                    </p>
+                </div>
+
+                <div class="codepen-container">
+                    <div class="edit-in-browser">
+                        <img src="https://get.foundation/sites/docs/assets/img/logos/edit-in-browser.svg" class="" height="" width="" alt="edit on codepen button"></a>
+                </div>
+                    <button class="copy">Copy</button>
+                </div>
+            
+<pre><code class="html"><span class="hljs-comment">&lt;!-- Anchors (links) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"about.html"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span>Learn More<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#features"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span>View All Features<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        
+<span class="hljs-comment">&lt;!-- Buttons (actions) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"submit success button"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert button"</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code>
+</pre>
+
+                <div class="docs-code-live">
+                    <!-- Anchors (links) -->
+                    <a href="about.html" class="button">Learn More</a>
+                    <a href="#features" class="button">View All Features</a>
+                    
+                    <!-- Buttons (actions) -->
+                    <button class="submit success button">Save</button>
+                    <button type="button" class="alert button">Delete</button>
+                </div>
+            </section>
+                <hr class="solid-line">
+            <section  id="anchor-sizing">
+                <h2 class="headers ">Sizing</h2>
+                <p class="contents">Additional classes can be added to your button to change its size and shape.</p>
+                <p class="part-vid">
+                    <a class="" data-open-video="0:34" href="https://www.youtube.com/watch?v=iEAtuFk4-LQ&amp;t=34" target="_blank">
+                        <img src="https://get.foundation/sites/docs/assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+                </p>
+                <div class="codepen-container">
+                    <div class="edit-in-browser">
+                        <img src="https://get.foundation/sites/docs/assets/img/logos/edit-in-browser.svg" class="" height="" width="" alt="edit on codepen button"></a>
+                </div>
+                    <button class="copy">Copy</button>
+                </div>
+                <pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button tiny"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>So Tiny<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>So Small<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>So Basic<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button large"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>So Large<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Such Expand<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Wow, Small Expand<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
+</pre>
+                <div class="docs-code-live"><a class="button tiny" href="#">So Tiny</a>
+                    <a class="button small" href="#">So Small</a>
+                    <a class="button" href="#">So Basic</a>
+                    <a class="button large" href="#">So Large</a>
+                    <a class="button expanded" href="#">Such Expand</a>
+                    <a class="button small expanded" href="#">Wow, Small Expand</a></div>
+
+                    <h3>Responsive Expanded buttons</h3>
+                    <p class="contents">If you are using the Sass version, you can activate these additional responsive button expand classes by changing the <code>$button-responsive-expanded</code> variable to true. (It is false by default to reduce CSS file size.)</p>
+                    <p class="contents">For CSS download users, you can <a href="https://gist.github.com/rafibomb/2497ca75ceedfa3f5ccf3ba146eae295">get the CSS here</a> and add it to your stylesheet.</p>
+                    <div class="pre">
+                        <button class="copy">Copy</button>
+                    <pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small small-only-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Wow, Expand only on small viewport<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small medium-only-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand only on medium viewport<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small large-only-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand only on large viewport<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small medium-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Wow, Expand on medium and larger<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small large-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand on large and larger<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small medium-down-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand on medium and smaller<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small large-down-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand on large and smaller<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+                </div>
+                    <div class="docs-code-live"><a class="button small small-only-expanded" href="#">Wow, Expand only on small viewport</a>
+                        <a class="button small medium-only-expanded" href="#">Expand only on medium viewport</a>
+                        <a class="button small large-only-expanded" href="#">Expand only on large viewport</a>
+                        
+                        <a class="button small medium-expanded" href="#">Wow, Expand on medium and larger</a>
+                        <a class="button small large-expanded" href="#">Expand on large and larger</a>
+                        
+                        <a class="button small medium-down-expanded" href="#">Expand on medium and smaller</a>
+                        <a class="button small large-down-expanded" href="#">Expand on large and smaller</a></div>
+                </section>
+                        <hr class="solid-line">
+                <section id="anchor-coloring">
+                        <h1 class="headers" >Coloring</h2>
+                        <p class="contents">Add color classes to give buttons additional meaning.</p>
+                        <p class="part-vid">
+                            <a class="" data-open-video="0:34" href="https://www.youtube.com/watch?v=iEAtuFk4-LQ&amp;t=34" target="_blank">
+                                <img src="https://get.foundation/sites/docs/assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+                        </p>
+                        <div class="codepen-container">
+                            <div class="edit-in-browser">
+                                <img src="https://get.foundation/sites/docs/assets/img/logos/edit-in-browser.svg" class="" height="" width="" alt="edit on codepen button"></a>
+                        </div>
+                            <button class="copy">Copy</button>
+                        </div>
+                        <pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button secondary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button success"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button alert"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button warning"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
+</pre>
+                        <div class="docs-code-live">
+                            <a class="button primary" href="#">Primary</a>
+                            <a class="button secondary" href="#">Secondary</a>
+                            <a class="button success" href="#">Success</a>
+                            <a class="button alert" href="#">Alert</a>
+                            <a class="button warning" href="#">Warning</a></div>
+
+                            <hr class="solid-line">
+                            <h3 class="custom-colors">Custom Colors</h3>
+                            <p class="contents">If you're using the Sass version of Foundation, you can customize the button classes by editing the <code>$button-palette</code> map in your settings file. The button palette defaults to <code>$foundation-palette</code>.</p>
+                            <p class="contents">If you don't need certain colors from the default palette, simply remove them from the list.</p>
+                            <div class="pre">
+                                
+                                <button class="copy">Copy</button>
+                                <pre><code class="scss"><span class="hljs-variable">$button-palette</span>: map-remove(<span class="hljs-variable">$foundation-palette</span>, (
+    primary,
+    secondary
+));</code></pre>
+                </div>
+                <p class="contents">Or you can add more colors to the default palette.</p>
+                <div class="pre">
+                    <button class="copy">Copy</button>
+                    <pre><code class="scss"><span class="hljs-variable">$button-palette</span>: map-merge(<span class="hljs-variable">$foundation-palette</span>, (
+    purple: <span class="hljs-number">#bb00ff</span>
+));</code></pre>
+                </div>
+                <p class="contents">Or you can define your own custom button palette.</p>
+                <div class="pre">
+                    <button class="copy">Copy</button>
+                    <pre><code class="scss"><span class="hljs-variable">$button-palette</span>: (
+    black: <span class="hljs-number">#000000</span>,
+    red: <span class="hljs-number">#ff0000</span>,
+    purple: <span class="hljs-number">#bb00ff</span>
+);</code></pre>
+                </div>
+                <hr class="solid-line">
+                <h3>Text Colors</h3>
+                <p class="contents">The text color for each button class is determined by either <code>$button-color</code> or <code>$button-color-alt</code>, whichever settings variable has more contrast.</p>
+                <div class="blue box">
+                    <p>The default settings meet WCAG 2.0 level AA contrast requirements. Be sure to [check the contrast](https://webaim.org/resources/contrastchecker/) when changing color variables. To give all buttons the same color text, set `$button-color` and `$button-color-alt` to the same value — but know that doing so may decrease accessibility.</p>
+                </div>
+            </section>
+                <hr class="solid-line">
+            <section id="anchor-hollowstyle">
+                <h1 class="headers">Hollow Style</h1>
+                <p class="contents">Add the <code>.hollow</code> class to a button to give it a hollow style. Change the <code>$button-fill</code> variable in your settings file to <code>hollow</code> to make this the default style. Changing this setting will remove the <code>.hollow</code> class from your CSS.</p>
+                <div class="pre">
+                    <button class="copy">Copy</button>
+                    <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hollow button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hollow button secondary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hollow button success"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hollow button alert"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hollow button warning"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hollow button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+                </div>
+                <div class="docs-code-live"><button class="hollow button" href="#">Primary</button>
+                    <button class="hollow button secondary" href="#">Secondary</button>
+                    <button class="hollow button success" href="#">Success</button>
+                    <button class="hollow button alert" href="#">Alert</button>
+                    <button class="hollow button warning" href="#">Warning</button>
+                    <button class="hollow button" href="#" disabled="">Disabled</button>
+                </div>
+            </section>
+                <hr class="solid-line">
+            <section id="anchor-disabledbuttons">
+                <h1 class="headers" >Disabled Buttons</h1>
+                <p class="contents">The <code>.disabled</code> class will give buttons a faded appearance. The class is a purely visual style, and won't actually disable a control. For <code>&lt;button&gt;</code> elements, you can add the <code>disabled</code> attribute to both disable and style it. If you want to disable a link, you should add the <code>aria-disabled</code> attribute to mark it as disabled for assistive technology.</p>
+                <p class="part-vid">
+                    <a class="" data-open-video="0:34" href="https://www.youtube.com/watch?v=iEAtuFk4-LQ&amp;t=34" target="_blank">
+                        <img src="https://get.foundation/sites/docs/assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+                </p>
+                <div class="edit-in-browser">
+                    <img src="https://get.foundation/sites/docs/assets/img/logos/edit-in-browser.svg" class="" height="" width="" alt="edit on codepen button"></a>
+            </div>
+            <div class="pre">
+                <button class="copy">Copy</button>
+                <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button disabled"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button primary"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button secondary"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button success"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button alert"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button warning"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+            </div>
+            <div class="docs-code-live"><a class="button disabled" href="#" aria-disabled="">Disabled</a>
+                <button type="button" class="button primary" disabled="">Disabled</button>
+                <button type="button" class="button secondary" disabled="">Disabled</button>
+                <button type="button" class="button success" disabled="">Disabled</button>
+                <button type="button" class="button alert" disabled="">Disabled</button>
+                <button type="button" class="button warning" disabled="">Disabled</button></div>
+                <p class="contents">Alternatively, you can also use disabled hollow buttons.</p>
+                <div class="pre">
+                    <button class="copy">Copy</button>
+                    <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button hollow disabled"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button hollow primary"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button hollow secondary"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button hollow success"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button hollow alert"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button hollow warning"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+                </div>
+                <div class="docs-code-live"><a class="button hollow disabled" href="#" aria-disabled="">Disabled</a>
+                    <button type="button" class="button hollow primary" disabled="">Disabled</button>
+                    <button type="button" class="button hollow secondary" disabled="">Disabled</button>
+                    <button type="button" class="button hollow success" disabled="">Disabled</button>
+                    <button type="button" class="button hollow alert" disabled="">Disabled</button>
+                    <button type="button" class="button hollow warning" disabled="">Disabled</button>
+                </div>
+            </section>
+                <hr class="solid-line">
+            <section id="anchor-clearstyle">
+                <h1 class="headers" >Clear Style</h1>
+                <p class="contents">Add the <code>.clear</code> class to a button to give it a clear style. Change the <code>$button-fill</code> variable in your settings file to <code>clear</code> to make this the default style. Changing this setting will remove the <code>.clear</code> class from your CSS.</p>
+                <p class="part-vid">
+                    <a class="" data-open-video="0:34" href="https://www.youtube.com/watch?v=iEAtuFk4-LQ&amp;t=34" target="_blank">
+                        <img src="https://get.foundation/sites/docs/assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+                </p>
+            <div class="codepen-container">
+                <div class="edit-in-browser">
+                    <img src="https://get.foundation/sites/docs/assets/img/logos/edit-in-browser.svg" class="" height="" width="" alt="edit on codepen button"></a>
+            </div>
+                <button class="copy">Copy</button>
+            </div>
+                    <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clear button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clear button secondary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clear button success"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clear button alert"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clear button warning"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clear button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
+</pre>
+<div class="docs-code-live"><a class="clear button" href="#">Primary</a>
+    <a class="clear button secondary" href="#">Secondary</a>
+    <a class="clear button success" href="#">Success</a>
+    <a class="clear button alert" href="#">Alert</a>
+    <a class="clear button warning" href="#">Warning</a>
+    <a class="clear button" href="#" disabled="">Disabled</a></div>
+            <p class="contents">This is especially useful as a secondary action button. This way you get proper spacing and line-height. Example:</p>
+            <p class="contents">
+                <button class="button primary" href="#">Primary Action</button>
+                <button class="clear button" href="#">Secondary Action</button></p>
+            </section>
+                <hr class="solid-line">
+            <section id="anchor-dropdown">
+                <h1 class="headers" >Dropdown Arrows</h1>
+                <p class="contents">Add a dropdown arrow to your button with the <code>.dropdown</code> class.</p>
+                <div class="blue box">
+                    <p>This doesn't add dropdown functionality automatically. To do that, you can attach our <a href="dropdown.html">Dropdown plugin</a>.</p>
+                </div>
+                <div class="codepen-container">
+                    <div class="edit-in-browser">
+                        <img src="https://get.foundation/sites/docs/assets/img/logos/edit-in-browser.svg" class="" height="" width="" alt="edit on codepen button"></a>
+                </div>
+                    <button class="copy">Copy</button>
+                </div>
+                <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown button tiny"</span>&gt;</span>Dropdown Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown button small"</span>&gt;</span>Dropdown Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown button"</span>&gt;</span>Dropdown Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown button large"</span>&gt;</span>Dropdown Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown button expanded"</span>&gt;</span>Dropdown Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+</pre>
+<div class="docs-code-live">
+    <button class="dropdown button tiny">Dropdown Button</button>
+    <button class="dropdown button small">Dropdown Button</button>
+    <button class="dropdown button">Dropdown Button</button>
+    <button class="dropdown button large">Dropdown Button</button>
+    <button class="dropdown button expanded">Dropdown Button</button>
+</div>
+</section>
+            <hr class="solid-line">
+        <section id="anchor-accessibility">
+            <h1 class="headers" >Accessibility</h1>
+            <p class="contents">Make sure that the text of the button is descriptive. If for some reason, your button contains no readable text (for example, just a symbol or icon), add screen reader-only text to the button to clarify its purpose. The symbol or icon should be wrapped in an element with the attribute <code>aria-hidden="true"</code>, to prevent screen readers from trying to pronounce the symbol.</p>
+            <p class="contents">Use the <code>.show-for-sr</code> class to define screen reader-only text.</p>
+            <div class="pre">
+                <button class="copy">Copy</button>
+                <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Screen readers will see "close" --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"show-for-sr"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Visual users will see the X, but not the "Close" text --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fi-x"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+            </div>
+            <div class="docs-code-live"><button class="button" type="button">
+                <!-- Screen readers will see "close" -->
+                <span class="show-for-sr">Close</span>
+                <!-- Visual users will see the X, but not the "Close" text -->
+                <span aria-hidden="true"><i class="fi-x"></i></span>
+              </button>
+                        </div>
+                    </section>
+                        <hr class="solid-line">
+                    <section id="anchor-sass">
+                <h1 class="headers" >Sass Reference</h1>
+                <h3 class="custom-colors">Variables</h3>
+                <p class="contents">The default styles of this component can be customized using these Sass variables in your project's <a href="sass.html#the-settings-file">settings file</a>.</p>
+                <table class="sass-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Default Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>$button-font-family</code></td>
+                            <td>Font</td>
+                            <td><code>inherit</code></td>
+                            <td><p>Font family for button elements.</p></td>                          
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-font-weight</code></td>
+                            <td>Font-Weight</td>
+                            <td><code>null</code></td>
+                            <td><p>Font weight for button elements. Ignored if null (default)</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-padding</code></td>
+                            <td>List</td>
+                            <td><code>0.85em 1em</code></td>
+                            <td><p>Padding inside buttons.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-margin</code></td>
+                            <td>List</td>
+                            <td><code>0 0 $global-margin 0</code></td>
+                            <td><p>Margin around buttons.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-fill</code></td>
+                            <td>Keyword</td>
+                            <td><code>solid</code></td>
+                            <td><p>Default fill for buttons. Can either be <code>solid</code> or <code>hollow</code>.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-background</code></td>
+                            <td>Color</td>
+                            <td><code>$primary-color</code></td>
+                            <td><p>Default background color for buttons.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-background-hover</code></td>
+                            <td>Color</td>
+                            <td><code>scale-color($button-background, $lightness: -15%)</code></td>
+                            <td><p>Background color on hover for buttons.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-color</code></td>
+                            <td>List</td>
+                            <td><code>$white</code></td>
+                            <td><p>Font color for buttons.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-color-alt</code></td>
+                            <td>List</td>
+                            <td><code>$black</code></td>
+                            <td><p>Alternative font color for buttons.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-radius</code></td>
+                            <td>Number</td>
+                            <td><code>$global-radius</code></td>
+                            <td><p>Border radius for buttons, defaulted to global-radius.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-border</code></td>
+                            <td>List</td>
+                            <td><code>1px solid transparent</code></td>
+                            <td><p>Border for buttons, transparent by default</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-hollow-border-width</code></td>
+                            <td>Number</td>
+                            <td><code>1px</code></td>
+                            <td><p>Border width for hollow outline buttons</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-sizes</code></td>
+                            <td>Map</td>
+                            <td><code>tiny: 0.6rem<br>small: 0.75rem<br>default: 0.9rem<br>large: 1.25rem<br></code></td>
+                            <td><p>Sizes for buttons.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-palette</code></td>
+                            <td>Map</td>
+                            <td><code>$foundation-palette</code></td>
+                            <td><p>Coloring classes. A map of classes to output in your CSS, like <code>.secondary</code>, <code>.success</code>, and so on.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-opacity-disabled</code></td>
+                            <td>List</td>
+                            <td><code>0.25</code></td>
+                            <td><p>opacity for a disabled button.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-background-hover-lightness</code></td>
+                            <td>Number</td>
+                            <td><code>-20%</code></td>
+                            <td><p>Background color lightness on hover for buttons.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-hollow-hover-lightness</code></td>
+                            <td>Number</td>
+                            <td><code>-50%</code></td>
+                            <td><p>Color lightness on hover for hollow buttons.</p></td>
+                        </tr>
+                        <tr class="second">
+                            <td><code>$button-transition</code></td>
+                            <td>List</td>
+                            <td><code>background-color 0.25s ease-out, color 0.25s ease-out</code></td>
+                            <td><p>transitions for buttons.</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>$button-responsive-expanded</code></td>
+                            <td>Boolean</td>
+                            <td><code>false</code></td>
+                            <td><p>Additional responsive classes for .expanded</p></td>
+                        </tr>
+                    </tbody>
+                </table> 
+            <hr class="solid-line">
+            <h3 class="custom-colors">Mixins</h3>
+            <p class="contents">We use these mixins to build the final CSS output of this component. You can use the mixins yourself to build your own class structure out of our components.</p>
+            <h3 class="custom-colors">button-expand</h3>
+            <pre>
+                <code><span class="hljs-keyword">@include</span> button-expand(<span class="hljs-variable">$expand</span>);</code></pre>
+            <p class="contents">Expands a button to make it full-width.</p>
+            <table class="sass-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Default Value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>$expand</code></td>
+                        <td>Boolean</td>
+                        <td><code>True</code></td>
+                        <td><p>Set to true to enable the expand behavior. Set to false to reverse this behavior.</p></td>                          
+                    </tr>
+                    </tbody>
+                </table>
+                <hr class="solid-line">
+                <h3 class="custom-colors">button-fill</h3>
+                <pre>
+                    <code><span class="hljs-keyword">@include</span> button-fill(<span class="hljs-variable">$fill</span>);</code></pre>
+                <p class="contents">Sets the base styles of a hollow or clear button filling according to <code>$fill</code>.
+                    See mixin <code>button-fill-style</code> for the filling styles.</p>
+                    <table class="sass-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Default Value</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>$fill</code></td>
+                                <td>Keyword</td>
+                                <td><code>$button-fill</code></td>
+                                <td><p>Type of filling between hollow and clear. solid has no effects.</p></td>                          
+                            </tr>
+                            </tbody>
+                        </table>
+                        <hr class="solid-line">
+                        <h3 class="custom-colors">button-fill-style</h3>
+                        <pre>
+                            <code><span class="hljs-keyword">@include</span> button-fill-style(<span class="hljs-variable">$fill</span>, <span class="hljs-variable">$background</span>, <span class="hljs-variable">$background-hover</span>, <span class="hljs-variable">$color</span>);</code></pre>
+                        <p class="contents">Sets the visual styles of a solid/hollow/clear button filling according to <code>$fill</code>.
+                            See mixins <code>button-style</code>, <code>button-hollow-style</code> and <code>button-clear-style</code> for effects of visual styling parameters.</p>
+                            <table class="sass-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Type</th>
+                                        <th>Default Value</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>$fill</code></td>
+                                        <td>Keyword</td>
+                                        <td><code>$button-fill</code></td>
+                                        <td><p>Type of filling between hollow and clear.</p></td>                          
+                                    </tr>
+                                    <tr class="second">
+                                        <td><code>$background</code></td>
+                                        <td>Color</td>
+                                        <td><code>$button-background</code></td>
+                                        <td><p>-</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>$background-hover</code></td>
+                                        <td>Color</td>
+                                        <td><code>$button-background-hover</code></td>
+                                        <td><p>-</p></td>
+                                    </tr>
+                                    <tr class="second">
+                                        <td><code>$color</code></td>
+                                        <td>Color</td>
+                                        <td><code>$button-color</code></td>
+                                        <td><p>-</p></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <hr class="solid-line">
+                                <h3 class="custom-colors">button-style</h3>
+                                <pre>
+                                    <code><span class="hljs-keyword">@include</span> button-style(<span class="hljs-variable">$background</span>, <span class="hljs-variable">$background-hover</span>, <span class="hljs-variable">$color</span>);</code></pre>
+                                    <p class="contents">Sets the visual style of a button.</p>
+                                    <table class="sass-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Parameter</th>
+                                                <th>Type</th>
+                                                <th>Default Value</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>$background</code></td>
+                                                <td>Color</td>
+                                                <td><code>$button-background</code></td>
+                                                <td><p>Background color of the button.</p></td>                          
+                                            </tr>
+                                            <tr class="second">
+                                                <td><code>$background-hover</code></td>
+                                                <td>Color</td>
+                                                <td><code>$button-background-hover</code></td>
+                                                <td><p>Background color of the button on hover. Set to auto to have the mixin automatically generate a hover color.</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>$color</code></td>
+                                                <td>Color</td>
+                                                <td><code>$button-color</code></td>
+                                                <td><p>Text color of the button. Set to auto to automatically generate a color based on the background color.</p></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr class="solid-line">
+                                        <h3 class="custom-color">button-hollow</h3>
+                                        <pre>
+                                            <code><span class="hljs-keyword">@include</span> button-hollow;</code></pre>
+                                        <p class="contents">Sets the base styles of a hollow button.
+                                             See mixin <code>button-hollow-style</code> for the filling styles.</p>
+                                             <hr class="solid-line">
+                                             <h3 class="custom-color">button-hollow-style</h3>
+                                             <pre>
+                                                 <code><span class="hljs-keyword">@include</span> button-hollow-style(<span class="hljs-variable">$color</span>, <span class="hljs-variable">$hover-lightness</span>, <span class="hljs-variable">$border-width</span>);</code></pre>
+                                            <p class="contents">Sets the visual style of a hollow button.</p>
+                                            <table class="sass-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Parameter</th>
+                                                        <th>Type</th>
+                                                        <th>Default Value</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><code>$color</code></td>
+                                                        <td>Color</td>
+                                                        <td><code>$button-background</code></td>
+                                                        <td><p>Text and border color of the button.</p></td>                          
+                                                    </tr>
+                                                    <tr class="second">
+                                                        <td><code>$hover-lightness</code></td>
+                                                        <td>Color</td>
+                                                        <td><code>$button-hollow-hover-lightness</code></td>
+                                                        <td><p>Color lightness on hover.</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>$border-width</code></td>
+                                                        <td>Color</td>
+                                                        <td><code>$button-hollow-border-width</code></td>
+                                                        <td><p>Border width of the button.</p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <hr class="solid-line">
+                                                <h3 class="custom-color">button-clear</h3>
+                                                <pre>
+                                                    <code><span class="hljs-keyword">@include</span> button-clear;</code></pre>
+                                                <p class="contents">Sets the base styles of a clear button.
+                                                        See mixin <code>button-clear-style</code> for the filling styles.</p>
+                                                <hr class="solid-line">
+                                                <h3 class="custom-color">button-clear-style</h3>
+                                                <pre>
+                                                    <code><span class="hljs-keyword">@include</span> button-clear-style(<span class="hljs-variable">$color</span>, <span class="hljs-variable">$hover-lightness</span>);</code></pre>
+                                                <p class="contents">Sets the visual style of a clear button.</p>
+                                                <table class="sass-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parameter</th>
+                                                            <th>Type</th>
+                                                            <th>Default Value</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><code>$color</code></td>
+                                                            <td>Color</td>
+                                                            <td><code>$button-background</code></td>
+                                                            <td><p>Text color of the background.</p></td>                          
+                                                        </tr>
+                                                        <tr class="second">
+                                                            <td><code>$hover-lightness</code></td>
+                                                            <td>Color</td>
+                                                            <td><code>$button-hollow-hover-lightness</code></td>
+                                                            <td><p>Color lightness on hover.</p></td>
+                                                        </tr>
+                                                    </table>
+                                                <hr class="solid-line">
+                                                <h3 class="custom-color">button-disabled</h3>
+                                                <pre>
+                                                    <code><span class="hljs-keyword">@include</span> button-disabled(<span class="hljs-variable">$opacity</span>);</code></pre>
+                                                <p class="contents">Adds disabled styles to a button by fading the element and reseting the cursor.</p>
+                                                <table class="sass-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parameter</th>
+                                                            <th>Type</th>
+                                                            <th>Default Value</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><code>$opacity</code></td>
+                                                            <td>Number</td>
+                                                            <td><code>$button-opacity-disabled</code></td>
+                                                            <td><p>Opacity of the disabled button.</p></td>                          
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <hr class="solid-line">
+                                                <h3 class="custom-color">button-dropdown</h3>
+                                                <pre>
+                                                    <code><span class="hljs-keyword">@include</span> button-dropdown(<span class="hljs-variable">$size</span>, <span class="hljs-variable">$color</span>, <span class="hljs-variable">$offset</span>);</code></pre>
+                                                <p class="contents">Adds a dropdown arrow to a button.</p>
+                                                <table class="sass-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parameter</th>
+                                                            <th>Type</th>
+                                                            <th>Default Value</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><code>$size</code></td>
+                                                            <td>Number</td>
+                                                            <td><code>$0.4em</code></td>
+                                                            <td><p>Size of the arrow. We recommend using an em value so the triangle scales when used inside different sizes of buttons.</p></td>                          
+                                                        </tr>
+                                                        <tr class="second">
+                                                            <td><code>$color</code></td>
+                                                            <td>Color</td>
+                                                            <td><code>$white</code></td>
+                                                            <td><p>Color of the arrow.</p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>$offset</code></td>
+                                                            <td>Number</td>
+                                                            <td><code>$button-padding</code></td>
+                                                            <td><p>Distance between the arrow and the text of the button. Defaults to whatever the right padding of a button is.</p></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                <hr class="solid-line">
+                                                <h3 class="custom-color">button</h3>
+                                                <pre>
+                                                    <code><span class="hljs-keyword">@include</span> button(<span class="hljs-variable">$expand</span>, <span class="hljs-variable">$background</span>, <span class="hljs-variable">$background-hover</span>, <span class="hljs-variable">$color</span>, <span class="hljs-variable">$style</span>);</code></pre>
+                                                <p class="contents">Adds all styles for a button. For more granular control over styles, use the individual button mixins.</p>
+                                                <table class="sass-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parameter</th>
+                                                            <th>Type</th>
+                                                            <th>Default Value</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><code>$expand</code></td>
+                                                            <td>Boolean</td>
+                                                            <td><code>false</code></td>
+                                                            <td><p>Set to true to make the button full-width.</p></td>                          
+                                                        </tr>
+                                                        <tr class="second">
+                                                            <td><code>$background</code></td>
+                                                            <td>Color</td>
+                                                            <td><code>$button-background</code></td>
+                                                            <td><p>Background color of the button.</p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>$background-hover</code></td>
+                                                            <td>Color</td>
+                                                            <td><code>$button-background-hover</code></td>
+                                                            <td><p>Background color of the button on hover. Set to auto to have the mixin automatically generate a hover color.</p></td>
+                                                        </tr>
+                                                        <tr class="second">
+                                                            <td><code>$color</code></td>
+                                                            <td>Color</td>
+                                                            <td>$button-color</td>
+                                                            <td>Text color of the button. Set to auto to automatically generate a color based on the background color.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>$style</code></td>
+                                                            <td>Keyword</td>
+                                                            <td><code>solid</code></td>
+                                                            <td>Set to hollow to create a hollow button. The color defined in $background will be used as the primary color of the button.</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </section>
+                                                 </div>
+            <div class="middle-right">
+               <div class="middle-right-top-half">
+                   <p>BUTTON</p>
+                   <p id="basics-links" class="anchor-basics"><a href="#anchor-basics">Basics</a></p>
+                   <p id="sizing-links" class="anchor-sizing"><a href="#anchor-sizing">Sizing</a></p>
+                   <p id="coloring-links" class="anchor-coloring"><a href="#anchor-coloring">Coloring</a></p>
+                   <p id="hollowstyle-links" class="anchor-hollowstyle"><a href="#anchor-hollowstyle">Hollow Style</a></p>
+                   <p id="disabledbuttons-links" class="anchor-disabledbuttons"><a href="#anchor-disabledbuttons">Disabled Buttons</a></p>
+                   <p id="clearstyle-links" class="anchor-clearstyle"><a href="#anchor-clearstyle">Clear Style</a></p>
+                   <p id="dropdown-links" class="anchor-dropdown"><a href="#anchor-dropdown">Dropdown Arrows</a></p>
+                   <p id="accessibility-links" class="anchor-accessibility"><a href="#anchor-accessibility">Accessibility</a></p>
+                   <p id="sass-links" class="anchor-sass"><a href="#anchor-sass">Sass Reference</a></p>
+               </div>
+               <hr>
+               <ul class="docs-contribute-menu">
+                <li><a href="https://github.com/foundation/foundation-sites/edit/develop/docs/pages/button.md" target="_blank"><i class="fi-pencil"></i>Edit this Page</a></li>
+                <li><a href="https://github.com/foundation/foundation-sites/issues/new?title=%5BButton%5D%20ISSUE%20NAME%20HERE" target="_blank"><i class="fi-social-github"></i>Report a Bug</a></li>
+                <li><a href="https://github.com/foundation/foundation-sites/discussions" target="_blank"><i class="fi-comment"></i>Get Help</a></li>
+              </ul>
+              <div class="foundation-toc-ad-unit" id="TOCAdUnit"><div class="ad-unit"><h3 class="ad-unit-title">Master Button</h3><p class="ad-unit-text">Get up to speed FAST, learn straight from the experts who built Foundation.</p><a class="button ad-unit-button" href="https://zurb.com/university/foundation-intro?utm_source=Foundation%20Docs&amp;utm_medium=Docs&amp;utm_content=Struggling&amp;utm_campaign=Docs%20To%20Intro">Learn More</a></div></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="bottom-left"></div>
+            <div class="bottom-middle"></div>
+            <div class="bottom-left"></div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
