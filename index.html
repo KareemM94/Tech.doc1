@@ -12,11 +12,11 @@
     <header>
         <nav class="navigation">
                 <div class="first-link">
-                    <a href="#">Foundation Framework</a>
+                    <a>Foundation Framework</a>
                 </div>
                 <div class="links-wrap">
                     <div class="dropdown">
-                        <a href="#">Showcase</a>
+                        <a>Showcase</a>
                     <div class="dropdown-menu">
                         <ul class="dropdown-contents">
                             <li>Brands</li>
@@ -28,7 +28,7 @@
                     </div>
                     </div>
                     <div class="dropdown">
-                    <a href="#">Develop</a>
+                    <a>Develop</a>
                     <div class="dropdown-menu">
                         <ul>
                             <li class="solo-link">Frameworks</li>
@@ -42,7 +42,7 @@
                     </div>
                     </div>
                     <div class="dropdown">
-                    <a href="#">Tutorials</a>
+                    <a>Tutorials</a>
                     <div class="dropdown-menu">
                         <ul>
                             <li>Tutorials</li>
@@ -51,7 +51,7 @@
                     </div>
                      </div>
                      <div class="dropdown">
-                    <a href="#">Get Involved</a>
+                    <a>Get Involved</a>
                     <div class="dropdown-menu">
                         <ul>
                             <li>Connect</li>
@@ -66,7 +66,7 @@
                     </div>
                     </div>
                     <div class="dropdown">
-                    <a href="#">Docs</a>
+                    <a>Docs</a>
                     <div class="dropdown-menu">
                         <ul>
                             <li>Sites Docs</li>
@@ -74,8 +74,10 @@
                         </ul>
                     </div>
                     </div>
-                    <a href="#" class="last-link">Getting Started</a>
+                    <a class="last-link">Getting Started</a>
                 </div> 
+
+
         </nav>
     <div class="second-bar">
         <div class="top-left">
@@ -84,12 +86,28 @@
         </div>
         <i class="fa-sharp fa-solid fa-magnifying-glass fa-flip-horizontal magnify"></i>
         <input type="text" placeholder="Find a page, component, variable, mixin, function...">
+        
         <div class="top-right">
             <button class="button1" type="button">
                 <i class="fa-brands fa-github"></i>
                 Star
             </button>
         </div>
+
+        <div class="mobileNav">
+            <div class="leftMobile">
+                <p class="p1">Foundation for Sites</p>
+                <p class="p2">6.7.5  <span>changelog</span></p>
+            </div>
+            <div class="rightMobile">
+                <div class="componentBTN">
+
+                </div>
+                <i class="fa-sharp fa-solid fa-magnifying-glass fa-flip-horizontal magnify"></i>
+            </div>
+        </div>
+
+
     </div>
     </header>
     <main>
@@ -104,7 +122,7 @@
                 <p class="p3">Button</p>
                 <p class="p3">Button Group</p>
                 <p class="p3">Close Button</p>
-                <p class="p3">Slider</p>
+                <p class="p3">Slider <i class="fa-brands fa-js"></i></p>
                 <p class="p3">Switch</p>
                 <p>Navigation</p>
                 <p>Containers</p>
@@ -155,8 +173,8 @@
 
                 <div class="docs-code-live">
                     <!-- Anchors (links) -->
-                    <a href="about.html" class="button">Learn More</a>
-                    <a href="#features" class="button">View All Features</a>
+                    <a class="button">Learn More</a>
+                    <a class="button">View All Features</a>
                     
                     <!-- Buttons (actions) -->
                     <button class="submit success button">Save</button>
@@ -185,12 +203,12 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Such Expand<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Wow, Small Expand<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
 </pre>
-                <div class="docs-code-live"><a class="button tiny" href="#">So Tiny</a>
-                    <a class="button small" href="#">So Small</a>
-                    <a class="button" href="#">So Basic</a>
-                    <a class="button large" href="#">So Large</a>
-                    <a class="button expanded" href="#">Such Expand</a>
-                    <a class="button small expanded" href="#">Wow, Small Expand</a></div>
+                <div class="docs-code-live"><a class="button tiny">So Tiny</a>
+                    <a class="button small">So Small</a>
+                    <a class="button">So Basic</a>
+                    <a class="button large">So Large</a>
+                    <a class="button expanded">Such Expand</a>
+                    <a class="button small expanded">Wow, Small Expand</a></div>
 
                     <h3>Responsive Expanded buttons</h3>
                     <p class="contents">If you are using the Sass version, you can activate these additional responsive button expand classes by changing the <code>$button-responsive-expanded</code> variable to true. (It is false by default to reduce CSS file size.)</p>
@@ -208,15 +226,15 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small medium-down-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand on medium and smaller<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button small large-down-expanded"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Expand on large and smaller<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
                 </div>
-                    <div class="docs-code-live"><a class="button small small-only-expanded" href="#">Wow, Expand only on small viewport</a>
-                        <a class="button small medium-only-expanded" href="#">Expand only on medium viewport</a>
-                        <a class="button small large-only-expanded" href="#">Expand only on large viewport</a>
+                    <div class="docs-code-live"><a class="button small small-only-expanded">Wow, Expand only on small viewport</a>
+                        <a class="button small medium-only-expanded">Expand only on medium viewport</a>
+                        <a class="button small large-only-expanded">Expand only on large viewport</a>
                         
-                        <a class="button small medium-expanded" href="#">Wow, Expand on medium and larger</a>
-                        <a class="button small large-expanded" href="#">Expand on large and larger</a>
+                        <a class="button small medium-expanded">Wow, Expand on medium and larger</a>
+                        <a class="button small large-expanded">Expand on large and larger</a>
                         
-                        <a class="button small medium-down-expanded" href="#">Expand on medium and smaller</a>
-                        <a class="button small large-down-expanded" href="#">Expand on large and smaller</a></div>
+                        <a class="button small medium-down-expanded">Expand on medium and smaller</a>
+                        <a class="button small large-down-expanded">Expand on large and smaller</a></div>
                 </section>
                         <hr class="solid-line">
                 <section id="anchor-coloring">
@@ -240,11 +258,11 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button warning"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
 </pre>
                         <div class="docs-code-live">
-                            <a class="button primary" href="#">Primary</a>
-                            <a class="button secondary" href="#">Secondary</a>
-                            <a class="button success" href="#">Success</a>
-                            <a class="button alert" href="#">Alert</a>
-                            <a class="button warning" href="#">Warning</a></div>
+                            <a class="button primary">Primary</a>
+                            <a class="button secondary">Secondary</a>
+                            <a class="button success">Success</a>
+                            <a class="button alert">Alert</a>
+                            <a class="button warning">Warning</a></div>
 
                             <hr class="solid-line">
                             <h3 class="custom-colors">Custom Colors</h3>
@@ -423,7 +441,7 @@
                 <!-- Screen readers will see "close" -->
                 <span class="show-for-sr">Close</span>
                 <!-- Visual users will see the X, but not the "Close" text -->
-                <span aria-hidden="true"><i class="fi-x"></i></span>
+                <span aria-hidden="true"><i class="fa-solid fa-x"></i></span>
               </button>
                         </div>
                     </section>
@@ -881,11 +899,11 @@
                </div>
                <hr>
                <ul class="docs-contribute-menu">
-                <li><a href="https://github.com/foundation/foundation-sites/edit/develop/docs/pages/button.md" target="_blank"><i class="fi-pencil"></i>Edit this Page</a></li>
-                <li><a href="https://github.com/foundation/foundation-sites/issues/new?title=%5BButton%5D%20ISSUE%20NAME%20HERE" target="_blank"><i class="fi-social-github"></i>Report a Bug</a></li>
-                <li><a href="https://github.com/foundation/foundation-sites/discussions" target="_blank"><i class="fi-comment"></i>Get Help</a></li>
+                <li><i class="fa-solid fa-pen pen"></i><a href="#">Edit this Page</a></li>
+                <li><i class="fa-brands fa-github github2"></i><a href="#"></i>Report a Bug</a></li>
+                <li><i class="fa-solid fa-message message"></i><a href="#"></i>Get Help</a></li>
               </ul>
-              <div class="foundation-toc-ad-unit" id="TOCAdUnit"><div class="ad-unit"><h3 class="ad-unit-title">Master Button</h3><p class="ad-unit-text">Get up to speed FAST, learn straight from the experts who built Foundation.</p><a class="button ad-unit-button" href="https://zurb.com/university/foundation-intro?utm_source=Foundation%20Docs&amp;utm_medium=Docs&amp;utm_content=Struggling&amp;utm_campaign=Docs%20To%20Intro">Learn More</a></div></div>
+              <div class="foundation-toc-ad-unit" id="TOCAdUnit"><div class="ad-unit"><h3 class="ad-unit-title">Master Button</h3><p class="ad-unit-text">Get up to speed FAST, learn straight from the experts who built Foundation.</p><a class="button ad-unit-button" href="#">Learn More</a></div></div>
             </div>
         </div>
     </main>
