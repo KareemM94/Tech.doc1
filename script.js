@@ -20,3 +20,17 @@ window.addEventListener('scroll', ()=> {
         }
     })
 })
+const middleLeft = document.querySelector('.middle-left');
+
+const componentListBtn = document.querySelector('.componentBTN')
+componentListBtn.addEventListener('click', () => {
+middleLeft.classList.add('active');
+})
+
+const closeBtn = document.querySelector('.exit');
+
+closeBtn.addEventListener('click', () => {;
+    middleLeft.classList.remove('active');
+
+})
+
